@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:digitguessr/gameState.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,28 +49,35 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  double _counter = 0;
+  GameState state = GameState();
+  late GameQuestion question = GameQuestion("", 0, 0, 100);
 
   void _increment() {
     setState(() {
-      _counter++;
+      question.input++;
     });
   }
 
   void _decrement() {
     setState(() {
-      _counter--;
+      question.input--;
     });
+  }
+
+  void setQuestion() async {
+    question = await state.nextQuestion();
+  }
+
+  @protected
+  @mustCallSuper
+  @override
+  void initState() {
+    super.initState();
+    setQuestion();
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -98,22 +106,22 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'QUESTION: HOW OLD ARE YOU',
+              question.question,
               style: TextStyle(height: 5, fontSize: 25, ),
             ),
             Text(
-              '$_counter',
+              '$question.input',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Slider(
-              min: 0.0,
-              max: 100.0,
-              value: _counter,
+              min: question.lowEndRange,
+              max: question.highEndRange,
+              value: question.input,
               divisions: 10,
-              label: '${_counter.round()}',
+              label: '${question.input.round()}',
               onChanged: (dynamic value) {
                 setState(() {
-                  _counter = value;
+                  question.input = value;
                 });
               },
             ),
