@@ -48,16 +48,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  double _counter = 0;
 
-  void _incrementCounter() {
+  void _increment() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter++;
+    });
+  }
+
+  void _decrement() {
+    setState(() {
+      _counter--;
     });
   }
 
@@ -94,21 +95,47 @@ class _MyHomePageState extends State<MyHomePage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              'QUESTION: HOW OLD ARE YOU',
+              style: TextStyle(height: 5, fontSize: 25, ),
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Slider(
+              min: 0.0,
+              max: 100.0,
+              value: _counter,
+              divisions: 10,
+              label: '${_counter.round()}',
+              onChanged: (dynamic value) {
+                setState(() {
+                  _counter = value;
+                });
+              },
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                InkWell(
+                  onTap: _decrement,
+                  child: const Icon(
+                      Icons.remove
+                  ),
+                ),
+                InkWell(
+                  onTap: _increment,
+                  child: const Icon(
+                      Icons.add
+                  ),
+                ),
+              ],
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
