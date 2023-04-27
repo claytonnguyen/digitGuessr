@@ -71,7 +71,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-// void s(){}
+ void tapped(){
+   setState(() {
+     first = true;
+   });
+    gameState.nextQuestion();
+ }
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
             //   onTap: gameState.nextQuestion(),
             //   child: Icon(Icons.add),
             // ),
-          Text('${gameState.gameQuestion.question}'),
+          first ? Text('${gameState.gameQuestion.question}') : Text(""),
           Text('$counter'),
           Slider(
             min: 0,
@@ -126,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           InkWell(
-            onTap: gameState.nextQuestion(),
+            onTap: tapped,
             child: const Icon(Icons.navigate_next_rounded),
           )
       ],)
