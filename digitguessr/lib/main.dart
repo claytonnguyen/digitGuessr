@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:digitguessr/gameState.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,21 +12,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (context) => GameState(),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(title: 'Flutter Demo Home Page'),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -49,102 +53,83 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  GameState state = GameState();
-  late GameQuestion question = GameQuestion("", 0, 0, 100);
+  GameState gameState = GameState();
+  double counter = 0;
+  bool first = false;
 
   void _increment() {
     setState(() {
-      question.input++;
+      // question.input++;
+      counter++;
     });
   }
 
   void _decrement() {
     setState(() {
-      question.input--;
+      // question.input--;
+      counter--;
     });
   }
 
-  void setQuestion() async {
-    question = await state.nextQuestion();
-  }
-
-  @protected
-  @mustCallSuper
-  @override
-  void initState() {
-    super.initState();
-    setQuestion();
-  }
+// void s(){}
 
   @override
   Widget build(BuildContext context) {
+    // final gameState = context.watch<GameState>();
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              question.question,
-              style: TextStyle(height: 5, fontSize: 25, ),
-            ),
-            Text(
-              '$question.input',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Slider(
-              min: question.lowEndRange,
-              max: question.highEndRange,
-              value: question.input,
-              divisions: 10,
-              label: '${question.input.round()}',
-              onChanged: (dynamic value) {
-                setState(() {
-                  question.input = value;
-                });
-              },
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                InkWell(
-                  onTap: _decrement,
-                  child: const Icon(
-                      Icons.remove
-                  ),
+      body: Column(
+        children: [
+          // first ?
+          //   Consumer<GameState>(
+          //       builder: (context, gameState, _) => Text('${gameState.gameQuestion.question}')
+          //   ),
+            // InkWell(
+            //   onTap: gameState.nextQuestion(),
+            //   child: Icon(Icons.add),
+            // ),
+          Text('${gameState.gameQuestion.question}'),
+          Text('$counter'),
+          Slider(
+            min: 0,
+            max: 20,
+            value: counter,
+            // divisions: 10,
+            label: '${counter.round()}',
+            onChanged: (double value) {
+              setState(() {
+                counter = value;
+              });
+            },
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              InkWell(
+                onTap: _decrement,
+                // onTap: s,
+                child: const Icon(
+                    Icons.remove
                 ),
-                InkWell(
-                  onTap: _increment,
-                  child: const Icon(
-                      Icons.add
-                  ),
+              ),
+              InkWell(
+                onTap: _increment,
+                // onTap: s,
+                child: const Icon(
+                    Icons.add
                 ),
-              ],
-            )
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+              ),
+            ],
+          ),
+          InkWell(
+            onTap: gameState.nextQuestion(),
+            child: const Icon(Icons.navigate_next_rounded),
+          )
+      ],)
     );
   }
 }
