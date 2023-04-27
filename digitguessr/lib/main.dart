@@ -1,3 +1,4 @@
+import 'package:digitguessr/question.dart';
 import 'package:flutter/material.dart';
 import 'package:digitguessr/gameState.dart';
 import 'package:provider/provider.dart';
@@ -53,88 +54,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  GameState gameState = GameState();
-  double counter = 0;
-  bool first = false;
-
-  void _increment() {
-    setState(() {
-      // question.input++;
-      counter++;
-    });
-  }
-
-  void _decrement() {
-    setState(() {
-      // question.input--;
-      counter--;
-    });
-  }
-
- void tapped(){
-   setState(() {
-     first = true;
-   });
-    gameState.nextQuestion();
- }
 
   @override
   Widget build(BuildContext context) {
-    // final gameState = context.watch<GameState>();
+    final gameState = context.watch<GameState>();
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [
-          // first ?
-          //   Consumer<GameState>(
-          //       builder: (context, gameState, _) => Text('${gameState.gameQuestion.question}')
-          //   ),
-            // InkWell(
-            //   onTap: gameState.nextQuestion(),
-            //   child: Icon(Icons.add),
-            // ),
-          first ? Text('${gameState.gameQuestion.question}') : Text(""),
-          Text('$counter'),
-          Slider(
-            min: 0,
-            max: 20,
-            value: counter,
-            // divisions: 10,
-            label: '${counter.round()}',
-            onChanged: (double value) {
-              setState(() {
-                counter = value;
-              });
-            },
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              InkWell(
-                onTap: _decrement,
-                // onTap: s,
-                child: const Icon(
-                    Icons.remove
-                ),
-              ),
-              InkWell(
-                onTap: _increment,
-                // onTap: s,
-                child: const Icon(
-                    Icons.add
-                ),
-              ),
-            ],
-          ),
-          InkWell(
-            onTap: tapped,
-            child: const Icon(Icons.navigate_next_rounded),
-          )
-      ],)
+      body: Question(gameState: gameState,)
     );
   }
 }
