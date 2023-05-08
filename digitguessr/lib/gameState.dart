@@ -14,7 +14,7 @@ class GameState extends ChangeNotifier {
 
   GameState(){
     getQuestions().then((value) => questions = value).then( (_) =>
-      nextQuestion()
+        nextQuestion()
     );
   }
 
@@ -34,6 +34,23 @@ class GameState extends ChangeNotifier {
         return false;
       } else {
         return true;
+      }
+    }
+  }
+  String calcPoint(GameQuestion gameQuestion){
+    double points = 0;
+    if(gameQuestion.timePercentage == 0){
+      return "false";
+    } else {
+      final range = gameQuestion.highEndRange - gameQuestion.lowEndRange;
+      final inputFromAnswer = (gameQuestion.answer - gameQuestion.input).abs();
+      final accuracy = inputFromAnswer / range;
+      points = accuracy * 100;
+      _points += points;
+      if (accuracy > gameSettings.accuracy){
+        return "false";
+      } else {
+        return "true";
       }
     }
   }
@@ -77,6 +94,24 @@ class GameQuestion{
   final double lowEndRange;
   final double highEndRange;
   final double timePercentage = 1;
+  String formatAmount(){
+    String price = input.toInt().toString();
+    String priceInText = "";
+    int counter = 0;
+    for(int i = (price.length - 1);  i >= 0; i--){
+      counter++;
+      String str = price[i];
+      if((counter % 3) != 0 && i !=0){
+        priceInText = "$str$priceInText";
+      }else if(i == 0 ){
+        priceInText = "$str$priceInText";
+
+      }else{
+        priceInText = ",$str$priceInText";
+      }
+    }
+    return priceInText.trim();
+  }
 
   GameQuestion(this.question, this.answer, this.lowEndRange, this.highEndRange) : input = ((highEndRange - lowEndRange) / 2) + lowEndRange;
 
