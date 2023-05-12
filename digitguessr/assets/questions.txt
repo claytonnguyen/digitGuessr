@@ -1,100 +1,314 @@
-129 is the atomic number of Unbiennium, an element yet to be discovered.
-205726 is the number of gambling slots in Nevada in 1999, which was one slot for every 10 people residing there.
-60 is the highest obtainable level on World of Warcraft (not including expansions).
-194 is the number of historic building in the Braden Castle Park Historic District in Bradenton, Florida.
-5000 is the number of base pairs in the DNA of the simplest viruses.
-196 is the rank of Vanuatu in population density.
-150000000 is the number of items held in the British Library.
-1e+150 is the estimation of the game-tree complexity of xiangqi.
-12 is the number of people who have walked on Earth's moon.
-15 is the approximate speed in miles per hour a penguin swims at.
-1e+21 is the number of grains of sand on all the world's beaches put together.
-101 is is the number of floors of Taipei 101, the tallest skyscraper in the world from 2004 to 2010.
-800000000 is the number of active users on Facebook as of December 2011.
-267 is the number of groups of order 64.
-189 is the atomic number of an element temporarily called Unoctennium.
-328 is the weight in pounds of an ovarian cyst removed from a woman in Galveston, Texas, in 1905, a world record.
-5600 is the number of metres above sea level of the highest bridge in the world, located in the Himalayan mountains.
-142 is the number of 6-vertex planar graphs.
-177 is the atomic number of an element temporarily called Unseptseptium.
-66 is the number of hot dogs eaten by World record holder Joey Chestnut in 15 minutes.
-6909 is the number of estimate for the linguistic diversity of living human languages or dialects.
-256 is the number of NFL regular season football games.
-564000 is the number of words in War and Peace by Leo Tolstoy.
-587 is the outgoing port for email message submission.
-102 is the number of floors in Empire State Building in New York City.
-666 is the number of the devil.
-2055001 is the number of people employed by Wal-mart in 2007.
-10 is the Number of dots in a tetractys.
-46 is the number of samurai, out of 47, who carried out the attack in the historical Ako vendetta.
-98 is the temperature (F) of the normal body.
+87 is the number of tools in the Wenger Swiss Army Knife version XXL, listed in the Guinness Book of World Records as the world's most multi-functional penknife.
+360 is the number of degrees in a circle for the purpose of angular measurement.
+285 is the total number of Rules of Acquisition in Star Trek.
+729 is the number of times a philosopher's pleasure is greater than a tyrant's pleasure according to Plato in the Republic.
+95 is the NBA record for Most Assists in a 7-game playoff series (by Magic Johnson of the Los Angeles Lakers in 1984).
+9 is the number of circles of Hell in Dante's Divine Comedy.
+14500 is the number of unique English words occur in the King James Version of the Bible.
 209 is the basketball record for most three pointers in a row.
-149000000 is the number of kilometres from the Earth the sun is.
-179 is the number of games played in the MLB with 162 games in the regular season and the potential 17 post-season games.
-225 is the longest distance in miles a deepwater lobster has been recorded to travel.
-1979 is a song by American alternative rock band The Smashing Pumpkins.
-204 is the HTTP status code indicating the request was received but there is no response to the request.
-250000 is the number of drivers that fall asleep while driving each day in the US, according to Harvard Medical School.
-22834 is the feet above sea level of the highest mountain in the Western Hemisphere, Mount Aconcagua in Argentina.
 432 is three-dozen sets of a dozen, making it three gross.
-4.52e+46 is the upper bound for the number of legal chess positions.
-20000000 is the weight in tons of the average iceberg.
-77 is the atomic number of iridium.
-204 is the HTTP status code indicating the request was received but there is no response to the request.
-191 is the atomic number of an element temporarily called Unennunium.
-179 is the atomic number of an element temporarily called Unseptennium.
-950000 is the pounds of bacon that Burger King restaurants prepare each year for their breakfast customers.
-161 is the number of different ways to bet on a roulette wheel.
-80 is the standard TCP/IP port number used for HTTP connections.
-666 is the number of the devil.
-125 is the atomic number of the yet-to-be-discovered element Unbipentium.
-40 is the number of thieves in Ali Baba and the Forty Thieves and in Ali Shar and Zumurrud, from Thousand and One Nights.
-170 is largest integer for which Google"s built-in calculator function can compute the factorial.
-177 is the all-time titles record held by Tennis Hall of Famer Martina Navratilova.
-440 is the standard frequency in hertz to which most orchestras tune the pitch A above middle C.
-42 is the number of gallons that one barrel of petroleum holds.
-81 is the number of prayers said in the Rosary in each night.
-21 is the number of trump cards of the tarot deck if one does not consider The Fool to be a proper trump card.
-365 is the number of solar days in the mean tropical year.
-280000000000000 is the number of possible unique physical addresses.
-1600000 is the number of people employed by the Indian railway system in India.
-25 is the number of points needed to win a set in volleyball under rally scoring rules.
-137 is the California Penal Code for "Offer bribe to influence testimony".
-90 is the number of minutes in a football (soccer) match.
-141 is the number of participants (90 Indians and 51 Pilgrims) at the First Thanksgiving.
-145 is the atomic number of Unquadpentium.
-191 is the atomic number of an element temporarily called Unennunium.
-1700 is the weight in pounds that the Kodiak bear can grow up to, a native of Alaska and one of the largest bears.
-155 is the number of performances Ivanhoe, the romantic opera that opened in January 31, 1891, ran for.
-1e+63 is the estimate by Archimedes in The Sand Reckoner of the total number of grains of sand that could fit into the entire cosmos.
+51 is the atomic number of antimony.
+17000 is the length in km of bicycle lanes with special bicycle traffic lights in the Netherlands.
+1979 is a song by American alternative rock band The Smashing Pumpkins.
+5200 is the number of standard size of a legion in the Roman Empire.
+123 is the Notation for national and international telephone numbers Recommendation ITU-T Recommendation E.123 defines a standard way to write telephone numbers, e-mail addresses, and web addresses.
+140 is the character-entry limit for Twitter, a well-known characteristic of the service (based on the text messaging limit).
+104 is the number of guns on Admiral Horatio Nelson's flagship HMS Victory.
+187 is 187th Street in the Washington Heights section of Manhattan.
+50 is the height in kilometres that a volcano can shoot ash into the sky.
+196 is the rank of Vanuatu in population density.
+463 is the number of days in the synodic period of Ceres.
+441 is the number of squares on a Super Scrabble board.
+400 is the number of years in a period of the Gregorian calendar, of which 97 are leap years and 303 are common.
+165 is the miles of Tahoe Rim Trail, a long-distance hiking trail around Lake Tahoe.
+29 is the number of attributes existing according to The Strokes in You Only Live Once.
+205 is the world speed record (mph) of a car on ice.
+78 is the atomic number of platinum.
+70 is the distance (meter) from archer to targets in Olympic Archery.
+240 is the number of pence in a pound in the British currency until 1971.
+490 is the number of Pokémon available as of the release of Pokémon Diamond and Pearl (excluding event Pokémon).
+163 is the atomic number of an element temporarily called Unhextrium.
+130 is the approximate maximum height in meters of trees.
+390 is the speed in feet per second that nerve impulses for muscle position travel at.
+16 is the minimum age that one can drop out of school in most states of the US (however, restrictions apply and vary depending on state).
+142 is the number of staircases at Hogwarts School of Witchcraft and Wizardry, in the Harry Potter universe.
+61000 is the average number of people airborne over the US at any given hour.
+163 is the atomic number of an element temporarily called Unhextrium.
+17000 is the length in km of bicycle lanes with special bicycle traffic lights in the Netherlands.
+334 is the long-time highest score in Test cricket (held by Sir Donald Bradman and Mark Taylor).
 22000 is the approximate number of workers who died during the building of the Panama Canal due to accidents and diseases.
-84 is the atomic number of polonium.
-75 is the age in years that the Saguaro Cactus, found in southwestern US, must be to grow branches.
-177 is the all-time titles record held by Tennis Hall of Famer Martina Navratilova.
-132 is the rank of Uruguay in world population.
-20 is the number of baby teeth in the deciduous dentition.
-159 is the number of counties in the state of Georgia.
-167 is width in feet of the Lincoln Memorial Reflecting Pool, which is is 2,029 feet (618 m) long and 167 feet (51 m) wide.
-71 is the number of different characters that can be used with a standard English Keyboard, excluding uppercase letters.
-149 is the number of goals a Madagascar soccer team scored against itself after the coach argued a call, and players kicked the ball into their own net 149 times.
-80 is the percentage of American men who say they would marry the same woman if they had it to do all over again.
-550 is the number of accidents per day that falling asleep while driving results in in the United States on average.
-749 is the pounds of paper products used by an American individual annually on average.
-1600000 is the number of people employed by the Indian railway system in India.
-13 is the Youngest age a minor can rent or purchase a T rated game by the ESRB without parental (age 18 or older) consent.
-1300 is the number of babies born prematurely in the USA every day.
-64374 is the number of km in length the greatest mountain range extends from (Arctic Ocean to the Atlantic Ocean).
-77 is the atomic number of iridium.
+92 is the number of stories in the Xujiahui Tower proposed to be built in Shanghai, China.
+105 is the atomic number of hahnium, also known as dubnium.
+8 is the number of legs that arachnids have.
+35000 is the number of genes in a human being.
+440 is the standard frequency in hertz to which most orchestras tune the pitch A above middle C.
+198 is the rank of Marshall Islands in world population.
+714 is the number of home runs Babe Ruth scored in his career.
+4000 is the weight in pounds that the Great White Shark can grow to.
+248 is the number of organs in the human body as traditionally depicted.
+285 is the total number of Rules of Acquisition in Star Trek.
+2701 is a plot triviality in Neal Stephenson's "Cryptonomicon".
+100 is the number of runs required for a cricket batsman to score a century, a significant milestone.
+107 is a common police code denoting a suspicious person.
+167 is the atomic number of an element temporarily called Unhexseptium.
+525 is the number of scan lines in the NTSC television standard.
+142 is the number of staircases at Hogwarts School of Witchcraft and Wizardry, in the Harry Potter universe.
+490 is the number of times Jesus told Peter to forgive his brother in the Gospel of Matthew.
+99 is a common price ending in psychological pricing.
+129 is the number of episodes of the TV series Becker that ran on CBS from 1998 to 2004.
+2500 is the number of letters on a typical typed page of text.
+100 is the number of years in a century.
 61 is the number of points required to win a "standard" game of Cribbage.
-203 is the HTTP status code indicating partial information.
-147 is the highest possible break in snooker, in the absense of fouls and refereeing errors.
-10000000000000000000 is the estimated insect population.
-110000 is the average number of hairs that people with black hair have.
-7000000000 is the estimated population for the world on 31 October 2011, the Day of Seven Billion.
-911 is the number of days after September 11th that the Madrid Attack took place.
-6000000000000000000 is the number of transistor produced worldwide in 2008.
-295 is the numerical designation of seven circumfrental or half-circumfrental routes of Interstate 95 in the United States.
-188000 is the number of lakes in Finland, which is also known as "the land of of the thousand lakes".
-85 is the atomic number of astatine.
-44 is the number of candles in a box of Hanukkah candles.
-136 is the section of the Mental Health Act 1983 (UK law) details removing a mentally ill person from a public place to a place of safety.
+55 is the percentage of movies released that are Rated R.
+108 is the percentage volume expansion of freezing water.
+191 is a common flight number for flights involved in crashes.
+15250 is the number of times the average driver will honk in a lifetime.
+81 is the number of stanzas or chapters in the Tao te Ching (in the most common arrangements).
+159 is the miles in length of the Sussex Border Path a footpath in southern England connecting with Thorney Island to Rye.
+749 is the pounds of paper products used by an American individual annually on average.
+383 is the cubic displacement in inches of a 350cid Small Block Chevrolet with a 400cid SBC crankshaft.
+313 is the number of Muslims who fought in the Battle of Badr against Muhammad's, and by extension, Islam's, foes.
+69 is the number Bill and Ted were thinking of when talking to their future selves.
+40 is the customary number of hours in a regular workweek in some Western countries.
+649 is the number of Pokémon as of Pokémon Black and White versions.
+108 is the name of a community of and for open source developers, created by Red Hat.
+536 is the number of ways to arrange the pieces of the stomachion puzzle into a square, not counting rotation or reflection.
+197 is the number of years that Fu Xi lived for altogether.
+196 is the number of athletes that Canada had in 15 sports at the 2006 Winter Olympics.
+163 is the atomic number of an element temporarily called Unhextrium.
+90 is the latitude of the North Pole and the South Pole.
+153 is the frequency in kHz of of the longwave transmitters Donebach, Ingøy, Braşov, and Kenadsa.
+24 is the number of teams that participated in each FIFA World Cup finals tournament between 1982 and 1994.
+95 is the percentage confidence interval that is considered satisfactory for most purposes in statistics.
+202 is the HTTP status code indicating the request was accepted but has not yet been fulfilled.
+140 is the character-entry limit for Twitter, a well-known characteristic of the service (based on the text messaging limit).
+365 is the number of solar days in the mean tropical year.
+57 is the number of people at 20th Century Fox Studios died amid rioting and suicide.
+209 is the basketball record for most three pointers in a row.
+712 is the largest known number such that it and its 8th power have no common digits.
+221 is sMTP status code for service closing transmission channel.
+755 is the number of home runs Hank Aaron ended his career with in 1976, a Major League record at the time.
+54 is the number of countries in Africa.
+42 is the number of gallons that one barrel of petroleum holds.
+2380 is kg of plasticine used for the movie "Chicken Run", the most plasticine used in an animated movie.
+441 is the number of squares on a Super Scrabble board.
+239 is the atomic mass number of the most common isotope of plutonium.
+1979 is a song by American alternative rock band The Smashing Pumpkins.
+450 is a perfect score in Canadian five-pin bowling.
+390 is the speed in feet per second that nerve impulses for muscle position travel at.
+400 is the number of years in a period of the Gregorian calendar, of which 97 are leap years and 303 are common.
+9801 is the dominant Japanese brand name of NEC's personal computers in the 1980s.
+141 is the number of participants (90 Indians and 51 Pilgrims) at the First Thanksgiving.
+245 is the number of Jewish singers who returned from captivity in Babylon in circa 538 BCE BC following the rise of Cyrus the Great and the Persian Empire.
+2701 is a plot triviality in Neal Stephenson's "Cryptonomicon".
+231 is the number of cubic inches in a U.S. liquid gallon.
+28 is the number of a car formerly run in the NASCAR Sprint Cup Series by Yates Racing.
+46 is the number of slices of pizza an average American kid eats in a year.
+165 is the number of episodes that the TV show Daniel Boone ran on NBC from 1964 to 1970.
+153 is the ordinal number of the coat of arms of Komi Republic in the State Heraldic Register of the Russian Federation.
+124 is a stable isotope of tellurium.
+209 is the basketball record for most three pointers in a row.
+159 is the number of isomers of C11H24.
+538 is the total number of votes in the Electoral College of the United States.
+17 is the maximum number of strokes of a Chinese radical.
+178 is the rank of Samoa in world population.
+6 is the number of feet below ground level a coffin is traditionally buried.
+212 is the boiling point of water at sea level in Fahrenheit degrees.
+227 is the number of days Pi Patel was at sea in the popular novel, Life of Pi.
+418 is the error code for "I'm a teapot" in the Hyper Text Coffee Pot Control Protocol.
+480 is the number of hours for rocking non-stop in a rocking chair, a world record held by Dennis Easterling of Atlanta.
+188 is the range measured in miles of a fully charged electric battery-powered Lightning GT sports car.
+46 is the number of samurai, out of 47, who carried out the attack in the historical Ako vendetta.
+61 is the number of points required to win a "standard" game of Cribbage.
+140 is liters of water needed to produce 1 cup of coffee.
+93 is the atomic number of neptunium.
+451 is the temperature at which the paper in books ignites, giving the name to Ray Bradbury's novel Fahrenheit 451.
+137 is the California Penal Code for "Offer bribe to influence testimony".
+135 is the height of the World's tallest thermometer in feet located in Baker, California.
+131 is the number serving a monkiker for Indie music.
+248 is the number of organs in the human body as traditionally depicted.
+196 is the number of athletes that Canada had in 15 sports at the 2006 Winter Olympics.
+18 is the number of levels in hell in the Chinese mythos.
+231 is the number of cubic inches in a U.S. liquid gallon.
+186 is the length of the Judgment at Nuremberg measured in 186 minutes.
+235 is the number of three interstate highways in the United States, located in the states of Iowa, Kansas, and Oklahoma.
+149 is the number of legal proceedings against 149 communists in Estonia in 1924.
+60 is the number of seconds in a minute.
+22000 is the approximate number of workers who died during the building of the Panama Canal due to accidents and diseases.
+76 is the atomic number of osmium.
+550 is the number of accidents per day that falling asleep while driving results in in the United States on average.
+182 is the atomic number of an element temporarily called Unoctbium.
+129 is the combined 2-year total of home runs for baseball's Sammy Sosa with 66 home runs in 1999 and 63 in 2000.
+35 is the percentage of all bingo players are under the age of 35.
+8 is the number of furlongs in a mile.
+17 is the maximum number of strokes of a Chinese radical.
+15 is the approximate speed in miles per hour a penguin swims at.
+221 is sMTP status code for service closing transmission channel.
+3585 is the depth in metres of the deepest mine in the world, the East Rand mine.
+95 is the NBA record for Most Assists in a 7-game playoff series (by Magic Johnson of the Los Angeles Lakers in 1984).
+136 is the hottest temperature ever recorded in Fahrenheits at Aziziya, Libya in September 1922.
+146 is the Guinness World Record for the most languages a poem was recited in.
+217 is the room in Stephen King's novel "The Shining", that plays a central part in the story as it is haunted.
+140 is liters of water needed to produce 1 cup of coffee.
+29 is the number of days it takes Saturn to orbit the Sun.
+175 is years Harriet (1830–2006) the Galápagos tortoise lived.
+191 is a common flight number for flights involved in crashes.
+71 is the number of different characters that can be used with a standard English Keyboard, excluding uppercase letters.
+9 is the number of circles of Hell in Dante's Divine Comedy.
+206 is bones in the typical adult human body.
+202 is the HTTP status code indicating the request was accepted but has not yet been fulfilled.
+366 is the number of days in a leap year.
+50 is the number of states in the United States of America.
+30000 is the number of distinct Chinese characters.
+116 is the prefix for several EU-wide telephone helplines designated as harmonised service of social value.
+41 is the number of times Paul McCartney sings the phrase "Let It Be" in the Beatles' hit Let It Be.
+313 is the number of Muslims who fought in the Battle of Badr against Muhammad's, and by extension, Islam's, foes.
+183 is the atomic number of an element temporarily called Unocttrium.
+214 is the number of Chinese radicals for the writing of Chinese characters according to the 1716 Kangxi Dictionary.
+26 is the number of Cantons of Switzerland.
+92 is the percentage of water in watermelons.
+145 is the atomic number of Unquadpentium.
+39 is the number of Scud missiles which Iraq fired at Israel during the Gulf War in 1991.
+2600 is the length of brink in feet of the Canadian "Horseshoe" Falls located in Niagara Falls, Ontario.
+144 is the number of square inches in a square foot.
+251 is the number of Pokémon available in Pokémon Gold and Silver is 251.
+18 is the number of wheels on the most common type of North American tractor-trailer truck, which are hence often called 18-wheelers.
+114 is the police non-emergency number in Denmark.
+129 is the atomic number of Unbiennium, an element yet to be discovered.
+5200 is the number of standard size of a legion in the Roman Empire.
+18 is the number of wheels on the most common type of North American tractor-trailer truck, which are hence often called 18-wheelers.
+212 is the boiling point of water at sea level in Fahrenheit degrees.
+177 is the elevation of Borgarvirki, in the north of Iceland, in meteres above sea level.
+3585 is the depth in metres of the deepest mine in the world, the East Rand mine.
+112 is the atomic number of the element copernicium (formerly called ununbium).
+79 is the record for cumulative weeks at #1 on the Billboard charts, held by Elvis Presley.
+18 is the number of colors the labels for Crayola crayons come in.
+13 is the number of loaves in a "baker's dozen".
+40 is the number of positions on a number of radio countdown programs, most notably American Top 40 and American Country Countdown.
+81 is the number of squares on a shogi playing board.
+180 is a number that in an astrological aspect is considered to be negative in influence.
+74 is the atomic number of tungsten.
+242 is the area code of The Bahamas located in the North West Atlantic Ocean.
+74 is the number of stars obtained by SpongeBob SquarePants in his driving school.
+68 is the number of sectors on one cylinder of MFM hard disks with 4 heads and 17 sectors per track.
+270 is the average number of days in human pregnancy.
+198 is the population of Perlethorpe, Nottinghamshire England.
+55 is the percentage of movies released that are Rated R.
+239 is the atomic mass number of the most common isotope of plutonium.
+304 is the record number of wickets taken in English cricket season by Tich Freeman in 1928.
+404 is the HTTP status code for "Not found", perhaps the most famous HTTP status code.
+214 is the first area code of metropolitan Dallas, Texas.
+30 is the duration in years of the Thirty Years' War - 1618 to 1648.
+149 is the number of legal proceedings against 149 communists in Estonia in 1924.
+98 is the temperature (F) of the normal body.
+614 is the number of Commandments, according to Rabbi Fackenheimin, that should be in Judaism, vs. the traditional 613.
+54 is the number of milligrams of caffeine Mountain Dew has.
+587 is the outgoing port for email message submission.
+161 is the the number of theatrical shorts of Tom and Jerry cartoons between 1940 and 1967.
+30000 is the number of distinct Chinese characters.
+128 is the atomic number of unbioctium, an element yet to be discovered.
+8674 is the number of unique words in the Hebrew Bible.
+3 is the number of witches in William Shakespeare's Macbeth.
+125 is years in a quasquicentennial.
+693 is the number of sections in Ludwig Wittgenstein's Philosophical Investigations.
+1729 is the smallest number representable in two different ways as a sum of two positive cubes, as Ramanujan stated on the spot.
+108 is the name of a community of and for open source developers, created by Red Hat.
+141 is the number of participants (90 Indians and 51 Pilgrims) at the First Thanksgiving.
+86 is the device number for a lockout relay function in electrical circuit protection schemes.
+31 is the number of musical triads (12 major, 12 minor, 4 diminished, and 3 augmented).
+555 is the number of keyboard sonatas written by Domenico Scarlatti, according to the catalog by Ralph Kirkpatrick.
+214 is the number of Chinese radicals for the writing of Chinese characters according to the 1716 Kangxi Dictionary.
+181 is the number of athletes from Belarus competed in 28 events at the 2008 Olympics in Beijing.
+220 is the SMTP code meaning "service ready".
+384 is the apogee (farthest distance from Earth) of the expeditions to the International Space Station in km.
+383 is the cubic displacement in inches of a 350cid Small Block Chevrolet with a 400cid SBC crankshaft.
+1979 is a song by American alternative rock band The Smashing Pumpkins.
+500 is the number of detectable earthquakes in the world each year.
+1979 is a song by American alternative rock band The Smashing Pumpkins.
+480 is the number of hours for rocking non-stop in a rocking chair, a world record held by Dennis Easterling of Atlanta.
+440 is the standard frequency in hertz to which most orchestras tune the pitch A above middle C.
+229 is the lowest individual batting score not achieved by any player in test match cricket.
+41 is the number of members in the U.S. Senate needed to defeat a cloture vote and sustain a filibuster indefinitely.
+204 is the HTTP status code indicating the request was received but there is no response to the request.
+194 is the rank of Equatorial Guinea in population density.
+214 is the first area code of metropolitan Dallas, Texas.
+148 is the number of episodes of the TV series The Fresh Prince of Bel-Air on NBC from 1990 to 1996.
+587 is the outgoing port for email message submission.
+230 is the common voltage in the European Union.
+115 is the atomic number of an element temporarily called ununpentium.
+1729 is the smallest number representable in two different ways as a sum of two positive cubes, as Ramanujan stated on the spot.
+194 is the NHL record number of saves, set by Bruce Sutter in 1982.
+5300 is the number of gum wrappers that Steve Fletcher has, the record for the largest gum wrapper collection.
+225 is the longest distance in miles a deepwater lobster has been recorded to travel.
+5 is times Muslims pray to Allah a day.
+4200 is the number of standard size of a legion in the Roman Republic.
+216 is the number of stitches on a baseball.
+117 is the atomic number of a recently discovered element temporarily called ununseptium.
+174 is the length in miles of the The Columbia University Library System collection, with over 9.3 million volumes, if stretched end-to-end.
+161 is the number of different ways to bet on a roulette wheel.
+222 is the number for Historical Books of the Old Testament in the Dewey Decimal System.
+336 is the number of dimples on an American golf ball.
+626 is the number of compositions of Wolfgang Amadeus Mozart, according to the Köchel Catalogue.
+29 is the number of letters in the Turkish,Finnish, Swedish,Faroese,Danish and Norwegianalphabets.
+4200 is the number of standard size of a legion in the Roman Republic.
+178 is the atomic number of an element temporarily called Unseptoctium.
+190 is the number of member states of the United Nations.
+45 is the sapphire wedding anniversary in years of marriage.
+41 is the number of members in the U.S. Senate needed to defeat a cloture vote and sustain a filibuster indefinitely.
+139 is the number of episdoes of the TV series MacGyver that ran on ABC from 1985 to 1992.
+11 is the number of denominations of Canadian currency produced in large quantities.
+267 is the number of groups of order 64.
+336 is the number of dimples on an American golf ball.
+149 is the number of goals a Madagascar soccer team scored against itself after the coach argued a call, and players kicked the ball into their own net 149 times.
+92 is the number of stories in the Xujiahui Tower proposed to be built in Shanghai, China.
+130 is the approximate maximum height in meters of trees.
+267 is the number of groups of order 64.
+189 is the rank of Stayin' Alive (1977) by the Bee Gees on Rolling Stone magazine's list of The 500 Greatest Songs of All Time.
+213 is the name of a hip hop, active 1990-2004.
+47 is the number of phonemes in English phonology in Received Pronunciation.
+62 is the atomic number of samarium.
+215 is the Dewey Decimal Classification for Science and religion.
+218 is votes required in the US House of Representatives to achieve a majority as of 2008.
+614 is the number of Commandments, according to Rabbi Fackenheimin, that should be in Judaism, vs. the traditional 613.
+229 is the lowest individual batting score not achieved by any player in test match cricket.
+192 is the rank of Andorra in world population.
+8000 is the approximate number of mirror squares the biggest disco ball in the world had in 2006.
+68 is the ideal temperature (F) for developing black-and-white film.
+183 is the number of runs scored by former cricket player Sourav Ganguly in the 1999 Cricket World Cup, second highest in World Cup history, and highest by an Indian in the tournament.
+2701 is a plot triviality in Neal Stephenson's "Cryptonomicon".
+17 is the number of flames emanating from the grenade cap-badge of the Grenadier Guards.
+2500 is the number of letters on a typical typed page of text.
+30000 is the number of distinct Chinese characters.
+128 is a sacred number honored by Beans for many generations.
+166 is the number of points the Dow Jones Industrials fell on June 24, 2005.
+24 is the number of books in the Tanakh.
+102 is the number of floors in Empire State Building in New York City.
+119 is a number to report children / youth at risk in France.
+440 is the standard frequency in hertz to which most orchestras tune the pitch A above middle C.
+5000 is the number of base pairs in the DNA of the simplest viruses.
+99 is a common price ending in psychological pricing.
+189 is the number of irregular verbs in the English language (from "abide" to "write").
+22834 is the feet above sea level of the highest mountain in the Western Hemisphere, Mount Aconcagua in Argentina.
+10000 is the number of other neurons each neuron is connected to in the human brain.
+84 is the atomic number of polonium.
+134 is the number of episodes in the TV series Hawaiian Eye that ran on ABC from 1959 to 1963.
+1729 is the smallest number representable in two different ways as a sum of two positive cubes, as Ramanujan stated on the spot.
+55 is the common speed limit for rural secondary roads and many urban freeways in many states of the United States.
+239 is the number of chapters in the Book of Mormon.
+235 is the number of three interstate highways in the United States, located in the states of Iowa, Kansas, and Oklahoma.
+500 is the winning permillage (tenth of a percent) of a sports team with equal numbers of wins and losses.
+191 is the number of episodes for the different regions in the PokÃ©mon anime.
+197 is the rank of the Solomon Islands in population density.
+243 is the Calling code for Zaire.
+270 is the average number of days in human pregnancy.
+49 is the number of days and night Siddhartha Gautama spent meditating as a holy man.
+450 is a perfect score in Canadian five-pin bowling.
+87 is the number of tools in the Wenger Swiss Army Knife version XXL, listed in the Guinness Book of World Records as the world's most multi-functional penknife.
+209 is the basketball record for most three pointers in a row.
+433 is the perfect score in the game show Fifteen To One, only ever achieved once in over 2000 shows.
+172 is the atomic number of an element temporarily called Unseptbium.
+64374 is the number of km in length the greatest mountain range extends from (Arctic Ocean to the Atlantic Ocean).
+43 is the maximum number of cars participating in a NASCAR race in the Cup Series or Nationwide Series.
+157 is the elevation in meters of Atalanti Island in the North Euboean Gulf of the Aegean Sea.
+72 is the percentage of water of which the human body is composed.
+68 is the number of sectors on one cylinder of MFM hard disks with 4 heads and 17 sectors per track.
