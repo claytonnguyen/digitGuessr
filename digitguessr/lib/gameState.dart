@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'dart:io';
+import 'package:digitguessr/RoundResult.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
@@ -10,7 +11,7 @@ class GameState extends ChangeNotifier {
   List<String> questions = [];
   double _points = 0;
   GameQuestion gameQuestion = GameQuestion("Sample Question", 10, 0, 20);
-  bool keepPlaying = true;
+  bool gameOver = false;
 
   GameState(){
     getQuestions().then((value) => questions = value).then( (_) =>
@@ -18,22 +19,32 @@ class GameState extends ChangeNotifier {
     );
   }
 
+  void reset(){
+    gameOver = false;
+    _points = 0;
+    notifyListeners();
+  }
+
+  get points => _points.round();
+
   // find and return the number of points this person gets
   // increment the total points as well
-  bool calcPoints(GameQuestion gameQuestion){
+  RoundResult calcPoints(GameQuestion gameQuestion){
     double points = 0;
     if(gameQuestion.timePercentage == 0){
-      return false;
+      gameOver = true;
+      return RoundResult(true, 0);
     } else {
       final range = gameQuestion.highEndRange - gameQuestion.lowEndRange;
       final inputFromAnswer = (gameQuestion.answer - gameQuestion.input).abs();
       final accuracy = inputFromAnswer / range;
       points = accuracy * 100;
-      _points += points;
       if (accuracy > gameSettings.accuracy){
-        return false;
+        gameOver = true;
+        return RoundResult(true, 0);
       } else {
-        return true;
+        _points += points;
+        return RoundResult(false, points.round());
       }
     }
   }
@@ -68,6 +79,7 @@ class GameState extends ChangeNotifier {
   }
 
 }
+
 
 // Time percentage allows us to use the time as a calculator to calculate the points
 class GameQuestion{

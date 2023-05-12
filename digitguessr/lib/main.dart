@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        home: const MyHomePage(title: 'digitGuessr'),
       ),
     );
   }
@@ -58,13 +58,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final gameState = context.watch<GameState>();
+
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text('${gameState.points} points', textScaleFactor: 1.25,),
+          )
+        ],
       ),
-      body: Question(gameState: gameState,)
+      body: gameState.gameOver ? Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Sorry, you lost'),
+              ElevatedButton(onPressed: () => gameState.reset(), child: Text('Play again'))
+            ]),
+      ) :
+      Question(gameState: gameState,)
     );
   }
 }
