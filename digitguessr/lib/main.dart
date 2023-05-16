@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(onPressed: () => gameState.reset(), child: Text('Play again'))
             ]),
       ) :
-      Question(gameState: gameState,)
+      Question(gameState: gameState)
     );
   }
 }

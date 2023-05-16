@@ -11,6 +11,10 @@ class DisplayQuestion extends StatelessWidget {
     return Column( children: [
       Padding(
         padding: const EdgeInsets.all(10.0),
+        child: Text('${gameState.timer ?? 0}', textAlign: TextAlign.center, textScaleFactor: 1.5),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(10.0),
         child: Text('${gameState.gameQuestion.question}', textAlign: TextAlign.center, textScaleFactor: 2.5,),
       ),
       Padding(

@@ -1,9 +1,13 @@
+import 'dart:async';
+
 import 'package:digitguessr/RoundResult.dart';
 import 'package:digitguessr/answer.dart';
 import 'package:digitguessr/displayQuestion.dart';
 import 'package:digitguessr/gameState.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:digitguessr/timing.dart';
+
 
 class Question extends StatefulWidget {
   final GameState gameState;
@@ -17,6 +21,8 @@ class _QuestionState extends State<Question> {
 
   bool printingAnswer = false;
   RoundResult result = RoundResult(true, 0);
+  Duration elapsed = Duration.zero;
+
 
   void _increment() {
     if(widget.gameState.gameQuestion.input + 1 < widget.gameState.gameQuestion.highEndRange) {
@@ -35,19 +41,21 @@ class _QuestionState extends State<Question> {
   }
 
   void tapped() async {
-    setState(() {
-      printingAnswer = true;
-      result = widget.gameState.calcPoints(widget.gameState.gameQuestion);
-      if(result.gameOver == true){
-        //navigate away - delete code in main.dart that displays another screen
-      }
-      widget.gameState.nextQuestion();
-    });
-    await Future.delayed(const Duration(milliseconds: 1000));
-    setState(() {
-      printingAnswer = false;
-    });
+      setState(() {
+        printingAnswer = true;
+        result = widget.gameState.calcPoints(widget.gameState.gameQuestion);
+        if (result.gameOver == true) {
+          //navigate away - delete code in main.dart that displays another screen
+        }
+        widget.gameState.nextQuestion();
+      });
+      await Future.delayed(const Duration(milliseconds: 1000));
+      setState(() {
+        printingAnswer = false;
+      });
   }
+
+
 
   @override
   Widget build(BuildContext context) {

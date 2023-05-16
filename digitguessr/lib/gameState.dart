@@ -1,6 +1,8 @@
 import 'dart:math';
 import 'dart:io';
+import 'dart:async';
 import 'package:digitguessr/RoundResult.dart';
+import 'package:digitguessr/timing.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
@@ -10,8 +12,10 @@ class GameState extends ChangeNotifier {
   GameSettings gameSettings = GameSettings();
   List<String> questions = [];
   double _points = 0;
-  GameQuestion gameQuestion = GameQuestion("Sample Question", 10, 0, 20);
+  // GameQuestion gameQuestion = GameQuestion("Sample Question", 10, 0, 20);
+  late GameQuestion gameQuestion;
   bool gameOver = false;
+  int? timer;
 
   GameState(){
     getQuestions().then((value) => questions = value).then( (_) =>
@@ -19,9 +23,20 @@ class GameState extends ChangeNotifier {
     );
   }
 
+  void getTime(int time){
+    timer = time;
+    notifyListeners();
+  }
+
+  void youLose(){
+    gameOver = true;
+    notifyListeners();
+  }
+
   void reset(){
     gameOver = false;
     _points = 0;
+    nextQuestion();
     notifyListeners();
   }
 
@@ -31,6 +46,7 @@ class GameState extends ChangeNotifier {
   // increment the total points as well
   RoundResult calcPoints(GameQuestion gameQuestion){
     double points = 0;
+    gameQuestion.stopTheClock();
     if(gameQuestion.timePercentage == 0){
       gameOver = true;
       return RoundResult(true, 0);
@@ -38,7 +54,7 @@ class GameState extends ChangeNotifier {
       final range = gameQuestion.highEndRange - gameQuestion.lowEndRange;
       final inputFromAnswer = (gameQuestion.answer - gameQuestion.input).abs();
       final accuracy = inputFromAnswer / range;
-      points = accuracy * 100;
+      points = 1 / accuracy;
       if (accuracy > gameSettings.accuracy){
         gameOver = true;
         return RoundResult(true, 0);
@@ -68,7 +84,7 @@ class GameState extends ChangeNotifier {
     String question = questionInList.join(" ");
     double hi = calcRange(answer, true);
     double lo = calcRange(answer, false);
-    gameQuestion = GameQuestion(question, answer, lo, hi);
+    gameQuestion = GameQuestion(question, answer, lo, hi, gameSettings, youLose, getTime);
     notifyListeners();
   }
 
@@ -82,14 +98,27 @@ class GameState extends ChangeNotifier {
 
 
 // Time percentage allows us to use the time as a calculator to calculate the points
-class GameQuestion{
+class GameQuestion {
   final String question;
   final double answer;
-  double input;
+  late double input;
   final double lowEndRange;
   final double highEndRange;
   final double timePercentage = 1;
+  late final Timing stopWatch;
+  final GameSettings gameSettings;
+  Function callback;
+  Function getTimeLeft;
 
-  GameQuestion(this.question, this.answer, this.lowEndRange, this.highEndRange) : input = ((highEndRange - lowEndRange) / 2) + lowEndRange;
+  GameQuestion(this.question, this.answer, this.lowEndRange, this.highEndRange,
+      this.gameSettings, this.callback, this.getTimeLeft) {
+    input = ((highEndRange - lowEndRange) / 2) + lowEndRange;
+    stopWatch = Timing(seconds: gameSettings.timer,
+        callback: callback, getTimeLeft: getTimeLeft);
+  }
+
+  stopTheClock(){
+    stopWatch.stop();
+  }
 
 }
