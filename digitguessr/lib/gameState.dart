@@ -36,6 +36,7 @@ class GameState extends ChangeNotifier {
   void reset(){
     gameOver = false;
     _points = 0;
+    timer = 0;
     nextQuestion();
     notifyListeners();
   }
@@ -49,17 +50,21 @@ class GameState extends ChangeNotifier {
     gameQuestion.stopTheClock();
     if(gameQuestion.timePercentage == 0){
       gameOver = true;
+      notifyListeners();
       return RoundResult(true, 0);
     } else {
       final range = gameQuestion.highEndRange - gameQuestion.lowEndRange;
       final inputFromAnswer = (gameQuestion.answer - gameQuestion.input).abs();
       final accuracy = inputFromAnswer / range;
       points = 1 / accuracy;
+      notifyListeners();
       if (accuracy > gameSettings.accuracy){
         gameOver = true;
+        notifyListeners();
         return RoundResult(true, 0);
       } else {
         _points += points;
+        notifyListeners();
         return RoundResult(false, points.round());
       }
     }

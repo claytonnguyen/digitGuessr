@@ -76,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Sorry, you lost'),
+              Text('You got ${gameState.points} points'),
               ElevatedButton(onPressed: () => gameState.reset(), child: Text('Play again'))
             ]),
       ) :

@@ -46,8 +46,9 @@ class _QuestionState extends State<Question> {
         result = widget.gameState.calcPoints(widget.gameState.gameQuestion);
         if (result.gameOver == true) {
           //navigate away - delete code in main.dart that displays another screen
+        } else {
+          widget.gameState.nextQuestion();
         }
-        widget.gameState.nextQuestion();
       });
       await Future.delayed(const Duration(milliseconds: 1000));
       setState(() {
@@ -114,4 +115,5 @@ class _QuestionState extends State<Question> {
       ],),
     );
   }
+
 }
