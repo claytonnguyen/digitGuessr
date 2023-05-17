@@ -12,7 +12,6 @@ class GameState extends ChangeNotifier {
   GameSettings gameSettings = GameSettings();
   List<String> questions = [];
   double _points = 0;
-  // GameQuestion gameQuestion = GameQuestion("Sample Question", 10, 0, 20);
   late GameQuestion gameQuestion;
   bool gameOver = false;
   int? timer;
@@ -36,7 +35,7 @@ class GameState extends ChangeNotifier {
   void reset(){
     gameOver = false;
     _points = 0;
-    timer = 0;
+    timer = gameSettings.timer;
     nextQuestion();
     notifyListeners();
   }
