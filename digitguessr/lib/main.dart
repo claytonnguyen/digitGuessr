@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
+        debugShowCheckedModeBanner: false,
         home: const MyHomePage(),
       ),
     );
@@ -66,6 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Padding(
+              padding: const EdgeInsets.all(33.0),
+              child: Text("DigitGuessr", textScaleFactor: 3),
+            ),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: ElevatedButton(onPressed: playGame, child: Text('Play Game')),
