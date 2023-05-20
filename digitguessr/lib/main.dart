@@ -1,6 +1,9 @@
 import 'package:digitguessr/question.dart';
+import 'package:digitguessr/quizPage.dart';
+import 'package:digitguessr/settingsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:digitguessr/gameState.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -14,40 +17,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => GameState(),
+      create: (context) => new GameState(),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const MyHomePage(title: 'digitGuessr'),
+        home: const MyHomePage(),
       ),
     );
   }
 }
 
+
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -55,32 +40,43 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  void playGame(){
+    final gameState = Provider.of<GameState>(context, listen: false);
+    gameState.nextQuestion();
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => QuizPage(),
+      ),
+    );
+  }
+
+  void settingsPage(){
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => SettingsPage(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final gameState = context.watch<GameState>();
-
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text('${gameState.points} points', textScaleFactor: 1.25,),
-          )
-        ],
-      ),
-      body: gameState.gameOver ? Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Sorry, you lost'),
-              Text('You got ${gameState.points} points'),
-              ElevatedButton(onPressed: () => gameState.reset(), child: Text('Play again'))
-            ]),
-      ) :
-      Question(gameState: gameState)
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(onPressed: playGame, child: Text('Play Game')),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(onPressed: settingsPage, child: Text('Custom Game')),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,19 +1,35 @@
+import 'package:digitguessr/RoundResult.dart';
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
-  final points;
-  final gameOver;
-  const Answer({super.key, required this.points, required this.gameOver });
+  final RoundResult result;
+  const Answer({super.key, required this.result });
 
   @override
   Widget build(BuildContext context) {
+    RangeValues _currentRangeValues = (result.input < result.answer) ?
+        RangeValues(result.input, result.answer) :
+        RangeValues(result.answer, result.input);
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          gameOver ? Text('Game Over') : Text('Nice Job!'),
-          Text('You got $points points!'),
+          result.gameOver ? Text('Game Over') : Text('Nice Job!'),
+          Text('You got ${result.points} points!'),
+          Text('Your Guess: ${result.input.round().toString()}'),
+          Text('The Answer: ${result.answer.round().toString()}'),
+          RangeSlider(
+            values: _currentRangeValues,
+            min: result.low,
+            max: result.high,
+            divisions: 100,
+            labels: RangeLabels(
+              _currentRangeValues.start.round().toString(),
+              _currentRangeValues.end.round().toString(),
+            ),
+            onChanged: (_) {},
+          )
         ],
       ),
     );

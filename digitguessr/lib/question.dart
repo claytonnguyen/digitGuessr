@@ -20,9 +20,8 @@ class Question extends StatefulWidget {
 class _QuestionState extends State<Question> {
 
   bool printingAnswer = false;
-  RoundResult result = RoundResult(true, 0);
-  Duration elapsed = Duration.zero;
-
+  //RoundResult result = RoundResult(gameOver: true, points: 0, input: 0, answer: 0);
+  late RoundResult result;
 
   void _increment() {
     if(widget.gameState.gameQuestion.input + 1 < widget.gameState.gameQuestion.highEndRange) {
@@ -50,7 +49,7 @@ class _QuestionState extends State<Question> {
           widget.gameState.nextQuestion();
         }
       });
-      await Future.delayed(const Duration(milliseconds: 1000));
+      await Future.delayed(const Duration(milliseconds: 3000));
       setState(() {
         printingAnswer = false;
       });
@@ -60,7 +59,7 @@ class _QuestionState extends State<Question> {
 
   @override
   Widget build(BuildContext context) {
-    return printingAnswer ? Answer(gameOver: result.gameOver, points: result.points) : Center(
+    return printingAnswer ? Answer(result: result) : Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

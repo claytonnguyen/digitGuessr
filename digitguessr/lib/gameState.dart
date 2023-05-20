@@ -17,9 +17,8 @@ class GameState extends ChangeNotifier {
   int? timer;
 
   GameState(){
-    getQuestions().then((value) => questions = value).then( (_) =>
-      nextQuestion()
-    );
+    getQuestions().then((value) => questions = value);
+        //.then((_) => nextQuestion());
   }
 
   void getTime(int time){
@@ -30,6 +29,12 @@ class GameState extends ChangeNotifier {
   void youLose(){
     gameOver = true;
     notifyListeners();
+  }
+
+  void setDefault(){
+    gameOver = false;
+    _points = 0;
+    timer = gameSettings.timer;
   }
 
   void reset(){
@@ -50,7 +55,8 @@ class GameState extends ChangeNotifier {
     if(gameQuestion.timePercentage == 0){
       gameOver = true;
       notifyListeners();
-      return RoundResult(true, 0);
+      return RoundResult(gameOver: true, points: 0, input: gameQuestion.input, answer: gameQuestion.answer,
+          low: gameQuestion.lowEndRange, high: gameQuestion.highEndRange);
     } else {
       final range = gameQuestion.highEndRange - gameQuestion.lowEndRange;
       final inputFromAnswer = (gameQuestion.answer - gameQuestion.input).abs();
@@ -60,11 +66,13 @@ class GameState extends ChangeNotifier {
       if (accuracy > gameSettings.accuracy){
         gameOver = true;
         notifyListeners();
-        return RoundResult(true, 0);
+        return RoundResult(gameOver: true, points: 0, input: gameQuestion.input, answer: gameQuestion.answer,
+            low: gameQuestion.lowEndRange, high: gameQuestion.highEndRange);
       } else {
         _points += points;
         notifyListeners();
-        return RoundResult(false, points.round());
+        return RoundResult(gameOver: false, points: points.round(), input: gameQuestion.input, answer: gameQuestion.answer,
+            low: gameQuestion.lowEndRange, high: gameQuestion.highEndRange);
       }
     }
   }
