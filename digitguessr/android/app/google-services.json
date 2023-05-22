@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969196261707",
+    "project_id": "digitguessr",
+    "storage_bucket": "digitguessr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969196261707:android:44d8c953659b1ccb4ad8ce",
+        "android_client_info": {
+          "package_name": "com.example.digitguessr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969196261707-9luuj448t5ss5v2mddv67q5ceaugrco5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLVKVNODAM5KPq5Thm8W0qBvRrkfRVr2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969196261707-9luuj448t5ss5v2mddv67q5ceaugrco5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

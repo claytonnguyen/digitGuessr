@@ -1,9 +1,23 @@
 import 'package:digitguessr/question.dart';
+<<<<<<< Updated upstream
+=======
+import 'package:go_router/go_router.dart';
+import 'package:digitguessr/quizPage.dart';
+import 'package:digitguessr/settingsPage.dart';
+>>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:digitguessr/gameState.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+import 'firebase_options.dart';
+main() {
+  /*WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );*/
+  //WidgetsFlutterBinding.ensureInitialized();flutt
+  //await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

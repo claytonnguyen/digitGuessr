@@ -13,7 +13,16 @@ class Question extends StatefulWidget {
 }
 
 class _QuestionState extends State<Question> {
+<<<<<<< Updated upstream
   bool guessTap = false;
+=======
+
+  bool printingAnswer = false;
+  bool guessTap = false;
+  //RoundResult result = RoundResult(gameOver: true, points: 0, input: 0, answer: 0);
+  late RoundResult result;
+
+>>>>>>> Stashed changes
   void _increment() {
     if(widget.gameState.gameQuestion.input + 1 < widget.gameState.gameQuestion.highEndRange) {
       setState(() {
@@ -30,8 +39,27 @@ class _QuestionState extends State<Question> {
     }
   }
 
+<<<<<<< Updated upstream
   void tapped(){
     print(widget.gameState.calcPoints(widget.gameState.gameQuestion));
+=======
+  void tapped() async {
+      setState(() {
+        guessTap = false;
+        printingAnswer = true;
+        result = widget.gameState.calcPoints(widget.gameState.gameQuestion);
+        if (result.gameOver == true) {
+          //navigate away - delete code in main.dart that displays another screen
+        } else {
+          widget.gameState.nextQuestion();
+        }
+      });
+      await Future.delayed(const Duration(milliseconds: 3000));
+      setState(() {
+        printingAnswer = false;
+      });
+  }
+>>>>>>> Stashed changes
 
     guessTap = false;
 
@@ -121,6 +149,7 @@ class _QuestionState extends State<Question> {
                       Icons.add
                   ),
                 ),
+<<<<<<< Updated upstream
               ],
             )
         ),
@@ -174,5 +203,74 @@ class _QuestionState extends State<Question> {
           ],
         ),
       ],);
+=======
+              ),
+            ],
+          ),
+          Visibility(
+              visible: guessTap,
+              child: Text('answer is ${widget.gameState.gameQuestion.answer}',
+                style: TextStyle(
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.w900,
+                    fontStyle: FontStyle.normal,
+                    fontFamily: 'Open Sans',
+                    fontSize: 30),
+              )
+          ),
+
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              SizedBox(
+                width: 200.0,
+                height: 100.0,
+                child: Card(
+                  color: Colors.amberAccent,
+                  child: Center(
+                    child: InkWell(
+                      onTap:(){
+                        setState((){
+                          guessTap = true;
+                        });
+                      },
+                      child: const Text("Guess",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w900,
+                            fontStyle: FontStyle.normal,
+                            fontFamily: 'Open Sans',
+                            fontSize: 30),
+                      ),
+                    ), //Text
+                  ), //Center
+                ), //Card
+              ),
+              SizedBox(
+                width: 200.0,
+                height: 100.0,
+                child: Card(
+                  color: Colors.lightGreen,
+                  child: Center(
+                    child: InkWell(
+                      onTap: tapped,
+                      child: const Text("Next",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w900,
+                            fontStyle: FontStyle.normal,
+                            fontFamily: 'Open Sans',
+                            fontSize: 30),
+                      ),
+                    ), //Text
+                  ), //Center
+                ), //Card
+              ),
+            ],
+          ),
+      ],),
+    );
+>>>>>>> Stashed changes
   }
 }
