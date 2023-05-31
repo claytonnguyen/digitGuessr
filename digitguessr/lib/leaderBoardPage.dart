@@ -28,15 +28,15 @@ class _LeaderBoardPageState extends State<LeaderBoardPage> {
     );
   }
 
-  void callFirebase(){
+/*  void callFirebase(){
     LeaderBoard leaderboard = LeaderBoard();
-    leaderboard.placeOrder();
+    leaderboard.placeTopTen(HighScore(username: 'hello there', score: 300));
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => MyHomePage(),
       ),
     );
-  }
+  }*/
 
   void playAgain(){
     final gameState = Provider.of<GameState>(context, listen: false);
@@ -72,15 +72,15 @@ class _LeaderBoardPageState extends State<LeaderBoardPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('LeaderBoard', textScaleFactor: 2.5),
+              ),
               ListView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
-                  itemBuilder: (BuildContext context, int index) => LeaderBoardResult(highScore: highScores[index]),
+                  itemBuilder: (BuildContext context, int index) => LeaderBoardResult(position: index + 1, highScore: highScores[index]),
                   itemCount: highScores.length,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(onPressed: callFirebase, child: Text('Call Firebase')),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),

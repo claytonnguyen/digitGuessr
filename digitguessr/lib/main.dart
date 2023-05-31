@@ -18,10 +18,6 @@ void _initFirebase() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  // GameState gameState = GameState();
-  // print("oh no");
-  // await gameState.placeOrder();
-  // print("nice");
 }
 
 class MyApp extends StatelessWidget {

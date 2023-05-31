@@ -3,10 +3,12 @@ import 'dart:async';
 import 'package:digitguessr/RoundResult.dart';
 import 'package:digitguessr/answer.dart';
 import 'package:digitguessr/displayQuestion.dart';
+import 'package:digitguessr/gameEndPlace.dart';
 import 'package:digitguessr/gameState.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:digitguessr/timing.dart';
+import 'package:go_router/go_router.dart';
 
 
 class Question extends StatefulWidget {
@@ -39,27 +41,31 @@ class _QuestionState extends State<Question> {
     }
   }
 
-  void tapped() async {
+  void tapped() {
       setState(() {
-        printingAnswer = true;
         result = widget.gameState.calcPoints(widget.gameState.gameQuestion);
         if (result.gameOver == true) {
-          //navigate away - delete code in main.dart that displays another screen
-        } else {
-          widget.gameState.nextQuestion();
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => gameEndPlace(state: widget.gameState, result: result),
+            ),
+          );
         }
+        printingAnswer = true;
       });
-      await Future.delayed(const Duration(milliseconds: 3000));
-      setState(() {
-        printingAnswer = false;
-      });
+
   }
 
-
+  void playMore(){
+    setState(() {
+      widget.gameState.nextQuestion();
+      printingAnswer = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return printingAnswer ? Answer(result: result) : Center(
+    return printingAnswer ? Answer(result: result, nextQuestion: playMore) : Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -108,7 +114,7 @@ class _QuestionState extends State<Question> {
             padding: const EdgeInsets.all(10.0),
             child: ElevatedButton(
               onPressed: tapped,
-              child: const Text("Get Next Question"),
+              child: const Text("Guess"),
             ),
           )
       ],),

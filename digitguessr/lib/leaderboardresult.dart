@@ -4,7 +4,8 @@ import 'highscore.dart';
 
 class LeaderBoardResult extends StatefulWidget {
   late HighScore highScore;
-  LeaderBoardResult({super.key, required this.highScore});
+  late int position;
+  LeaderBoardResult({super.key, required this.position, required this.highScore});
 
   @override
   State<LeaderBoardResult> createState() => _LeaderBoardResultState();
@@ -13,9 +14,12 @@ class LeaderBoardResult extends StatefulWidget {
 class _LeaderBoardResultState extends State<LeaderBoardResult> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Card(
 
-      child: Text(widget.highScore.username + ":   " + widget.highScore.score.toString())
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Text(widget.position.toString() + " " + widget.highScore.username + ":   " + widget.highScore.score.toString()),
+      )
     );
   }
 }

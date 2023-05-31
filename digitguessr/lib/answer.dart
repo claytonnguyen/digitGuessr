@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   final RoundResult result;
-  const Answer({super.key, required this.result });
+  final Function nextQuestion;
+  const Answer({super.key, required this.result, required this.nextQuestion});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,9 @@ class Answer extends StatelessWidget {
               _currentRangeValues.end.round().toString(),
             ),
             onChanged: (_) {},
+          ),
+          ElevatedButton(onPressed: () => nextQuestion(), child:
+            Text("Next Question")
           )
         ],
       ),
