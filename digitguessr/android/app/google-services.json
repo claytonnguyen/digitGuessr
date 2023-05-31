@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "441380888361",
+    "project_id": "secondproject-974ea",
+    "storage_bucket": "secondproject-974ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441380888361:android:1951c390fadd49b66da138",
+        "android_client_info": {
+          "package_name": "com.example.digitguessr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbwTmrq_sRLBjiiIcsI-42Wf9ELhe36h8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

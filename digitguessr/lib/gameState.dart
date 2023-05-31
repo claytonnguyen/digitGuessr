@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:io';
 import 'dart:async';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:digitguessr/RoundResult.dart';
 import 'package:digitguessr/timing.dart';
 import 'package:flutter/widgets.dart';
@@ -8,7 +9,15 @@ import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:digitguessr/gameSettings.dart';
 
+
 class GameState extends ChangeNotifier {
+  static const _answer = "answer";
+  static const _gameOver = "gameover";
+  static const _high = "high";
+  static const _input = "input";
+  static const _low = "low";
+  static const _pts = "points";
+
   GameSettings gameSettings = GameSettings();
   List<String> questions = [];
   double _points = 0;
