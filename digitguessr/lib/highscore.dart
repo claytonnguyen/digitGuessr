@@ -1,6 +1,7 @@
 class HighScore {
   final username;
   final score;
-  HighScore({this.username, this.score});
+  final location;
+  HighScore({this.username, this.score, this.location});
 
 }

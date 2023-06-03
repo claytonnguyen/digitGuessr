@@ -10,6 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:digitguessr/timing.dart';
 import 'package:go_router/go_router.dart';
 
+import 'gameEndCustom.dart';
+
 
 class Question extends StatefulWidget {
   final GameState gameState;
@@ -45,15 +47,25 @@ class _QuestionState extends State<Question> {
       setState(() {
         result = widget.gameState.calcPoints(widget.gameState.gameQuestion);
         if (result.gameOver == true) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => gameEndPlace(state: widget.gameState, result: result),
-            ),
-          );
+          print("${widget.gameState.gameSettings.timer} and ${widget.gameState.gameSettings.accuracy}");
+          if (widget.gameState.gameSettings.timer != 30 || widget.gameState.gameSettings.accuracy != 0.3){
+            print("HELKJFLKJDSKFJSsdfsdfffffffffffffffff");
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => gameEndCustom(state: widget.gameState, result: result),
+              ),
+            );
+          }else {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) =>
+                    gameEndPlace(state: widget.gameState, result: result),
+              ),
+            );
+          }
         }
         printingAnswer = true;
       });
-
   }
 
   void playMore(){

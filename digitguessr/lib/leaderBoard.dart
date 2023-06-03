@@ -10,6 +10,7 @@ import 'highscore.dart';
 class LeaderBoard{
   static const _username = "username";
   static const _points = "points";
+  static const _location = "location";
 
   String _collectionName = 'leaderboard';
   String _documentName = 'T0jW00lvbVIRjg6djqTH';
@@ -24,7 +25,8 @@ class LeaderBoard{
 
   Map<String, dynamic> _roundToDocumentData(HighScore highScore) => {
     _username : highScore.username,
-    _points : highScore.score
+    _points : highScore.score,
+    _location : highScore.location
   };
 
   Future<bool> didPlace(int score) async {
@@ -72,7 +74,6 @@ class LeaderBoard{
   Future<List<HighScore>> getHighScore() async {
     final queryResults = await _ordersCollection.doc(_documentName)
         .get();
-    //return queryResults.docs.map((doc) => _documentDataToLatteList(doc.data())).toList();
     return _documentDataToHighScoreList(queryResults.data()!);
   }
 
@@ -80,7 +81,6 @@ class LeaderBoard{
     final leaderboard = data['scores'];
 
     List<HighScore> highscores;
-    //return leaderboard.entries.map((e) => _documentDataToHighScore(e as Map<String, dynamic>)).toList();
     highscores = leaderboard.map<HighScore>((e) => _documentDataToHighScore(e)).toList();
     highscores.sort((a, b) => a.score > b.score ? -1 : 1);
     List<HighScore> topten;
@@ -95,7 +95,8 @@ class LeaderBoard{
   HighScore _documentDataToHighScore(Map<String, dynamic> score) {
     return HighScore(
         score: score[_points],
-        username: score[_username]
+        username: score[_username],
+        location: score[_location]
     );
   }
 }

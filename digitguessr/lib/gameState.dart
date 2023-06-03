@@ -65,7 +65,7 @@ class GameState extends ChangeNotifier {
       gameOver = true;
       notifyListeners();
       return RoundResult(gameOver: true, points: 0, input: gameQuestion.input, answer: gameQuestion.answer,
-          low: gameQuestion.lowEndRange, high: gameQuestion.highEndRange);
+          low: gameQuestion.lowEndRange.roundToDouble(), high: gameQuestion.highEndRange.roundToDouble());
     } else {
       final range = gameQuestion.highEndRange - gameQuestion.lowEndRange;
       final inputFromAnswer = (gameQuestion.answer - gameQuestion.input).abs();
@@ -76,12 +76,12 @@ class GameState extends ChangeNotifier {
         gameOver = true;
         notifyListeners();
         return RoundResult(gameOver: true, points: 0, input: gameQuestion.input, answer: gameQuestion.answer,
-            low: gameQuestion.lowEndRange, high: gameQuestion.highEndRange);
+            low: gameQuestion.lowEndRange.roundToDouble(), high: gameQuestion.highEndRange.roundToDouble());
       } else {
         _points += points;
         notifyListeners();
         return RoundResult(gameOver: false, points: points.round(), input: gameQuestion.input, answer: gameQuestion.answer,
-            low: gameQuestion.lowEndRange, high: gameQuestion.highEndRange);
+            low: gameQuestion.lowEndRange.roundToDouble(), high: gameQuestion.highEndRange.roundToDouble());
       }
     }
   }

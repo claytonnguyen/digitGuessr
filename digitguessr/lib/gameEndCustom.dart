@@ -1,59 +1,34 @@
-import 'package:digitguessr/highscore.dart';
-import 'package:digitguessr/leaderBoard.dart';
-import 'package:digitguessr/leaderBoardPage.dart';
-import 'package:digitguessr/location.dart';
+import 'package:digitguessr/customAccuracy.dart';
+import 'package:digitguessr/quizPage.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'RoundResult.dart';
 import 'gameState.dart';
+import 'main.dart';
 
-class gameEndPlace extends StatefulWidget {
+class gameEndCustom extends StatefulWidget {
   final RoundResult result;
   final GameState state;
-  const gameEndPlace({super.key, required this.result, required this.state});
+  const gameEndCustom({super.key, required this.result, required this.state});
 
   @override
-  State<gameEndPlace> createState() => _gameEndPlaceState();
+  State<gameEndCustom> createState() => _gameEndCustomState();
 }
 
-class _gameEndPlaceState extends State<gameEndPlace> {
-  LeaderBoard leaderBoard = LeaderBoard();
-
-  String location = "";
-  bool checked = false;
-  bool placed = false;
-  final _usernameController = TextEditingController(text: null);
-
-  _submit() async {
-      if(placed == true) {
-        HighScore highScore = HighScore(username: _usernameController.text, score: widget.state.points, location: location);
-        await leaderBoard.placeTopTen(highScore);
-      }
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => LeaderBoardPage(),
-        ),
-      );
+class _gameEndCustomState extends State<gameEndCustom> {
+  void goHome(){
+    widget.state.setDefault();
+    widget.state.gameSettings.accuracy = 0.3;
+    widget.state.gameSettings.timer = 30;
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => MyHomePage(),
+      ),
+    );
   }
 
-  Future<void> checkPlacement() async {
-    final didPlace = await leaderBoard.didPlace(widget.state.points);
-    if(didPlace){
-      location = await determinePosition();
-      print("location: ${location}");
-    }
-    setState(() {
-      placed = didPlace;
-      checked = true;
-    });
-  }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    checkPlacement();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,15 +59,10 @@ class _gameEndPlaceState extends State<gameEndPlace> {
               ),
               onChanged: (_) {},
             ),
-            placed ? TextFormField(
-              decoration: const InputDecoration(labelText: 'Username'),
-              controller: _usernameController,
-            ) : const Text(''),
-            Padding( padding: const EdgeInsets.all(20.0),
-              child: ElevatedButton(
-                  onPressed: _submit,
-                  child: !checked ? const Text('CHECKING LEADERBOARD ELIGIBILITY...') : (!placed ? const Text("Go to Leaderboard", textScaleFactor: 1.5) : const Text("Put me on the LeaderBoard", textScaleFactor: 1.5))
-              ),),
+            Padding(
+              padding: const EdgeInsets.all(6.0),
+              child: ElevatedButton(onPressed: goHome, child: Text('Go Back Home')),
+            )
           ],
         ),
       ),

@@ -11,7 +11,11 @@ class DisplayQuestion extends StatelessWidget {
     return Column( children: [
       Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Text('${gameState.timer ?? gameState.gameSettings.timer}', textAlign: TextAlign.center, textScaleFactor: 1.5),
+        child: Text('Time Left: ${gameState.timer ?? gameState.gameSettings.timer}', textAlign: TextAlign.center, textScaleFactor: 2),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Text('Total Points: ${gameState.points}', textAlign: TextAlign.center, textScaleFactor: 1.5,),
       ),
       Padding(
         padding: const EdgeInsets.all(10.0),
@@ -19,7 +23,7 @@ class DisplayQuestion extends StatelessWidget {
       ),
       Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Text('${gameState.gameQuestion.input.floor()}', textScaleFactor: 2,),
+        child: Text('Guess: ${gameState.gameQuestion.input.floor()}', textScaleFactor: 2,),
       ),
     ]);
   }

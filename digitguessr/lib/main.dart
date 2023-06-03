@@ -1,8 +1,10 @@
+import 'package:digitguessr/location.dart';
 import 'package:digitguessr/question.dart';
 import 'package:digitguessr/quizPage.dart';
 import 'package:digitguessr/settingsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:digitguessr/gameState.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -51,7 +53,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  void playGame(){
+  void playGame() async {
     final gameState = Provider.of<GameState>(context, listen: false);
     gameState.nextQuestion();
     Navigator.of(context).push(
