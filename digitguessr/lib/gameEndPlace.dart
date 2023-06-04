@@ -40,7 +40,7 @@ class _gameEndPlaceState extends State<gameEndPlace> {
     final didPlace = await leaderBoard.didPlace(widget.state.points);
     if(didPlace){
       location = await determinePosition();
-      print("location: ${location}");
+      //print("location: ${location}");
     }
     setState(() {
       placed = didPlace;

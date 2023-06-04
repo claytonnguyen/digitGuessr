@@ -79,7 +79,6 @@ class LeaderBoard{
 
   List<HighScore> _documentDataToHighScoreList(Map<String, dynamic> data) {
     final leaderboard = data['scores'];
-
     List<HighScore> highscores;
     highscores = leaderboard.map<HighScore>((e) => _documentDataToHighScore(e)).toList();
     highscores.sort((a, b) => a.score > b.score ? -1 : 1);

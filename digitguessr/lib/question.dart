@@ -47,9 +47,7 @@ class _QuestionState extends State<Question> {
       setState(() {
         result = widget.gameState.calcPoints(widget.gameState.gameQuestion);
         if (result.gameOver == true) {
-          print("${widget.gameState.gameSettings.timer} and ${widget.gameState.gameSettings.accuracy}");
-          if (widget.gameState.gameSettings.timer != 30 || widget.gameState.gameSettings.accuracy != 0.3){
-            print("HELKJFLKJDSKFJSsdfsdfffffffffffffffff");
+          if (widget.gameState.gameSettings.timer != 30 || widget.gameState.gameSettings.accuracy != 0.25){
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => gameEndCustom(state: widget.gameState, result: result),

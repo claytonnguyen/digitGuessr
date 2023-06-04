@@ -103,8 +103,8 @@ class GameState extends ChangeNotifier {
     double answer = double.tryParse(lineList[0]) ?? 0;
     List<String> questionInList = lineList.getRange(1, lineList.length).toList();
     String question = questionInList.join(" ");
-    double hi = calcRange(answer, true);
-    double lo = calcRange(answer, false);
+    double hi = calcRange(answer, true).roundToDouble();
+    double lo = calcRange(answer, false).roundToDouble();
     gameQuestion = GameQuestion(question, answer, lo, hi, gameSettings, youLose, getTime);
     notifyListeners();
   }
